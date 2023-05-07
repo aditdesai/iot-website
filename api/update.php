@@ -17,20 +17,7 @@ $userId = isset($array["userId"]) ? $array["userId"] : -1;
 $pinNum = isset($array["pinNum"]) ? $array["pinNum"] : -1;
 $state = isset($array["state"]) ? $array["state"] : '';
 
-/*
-$userId = $array["userId"];
-$pinNum = $array["pinNum"];
-$state = $array["state"];
 
-
-$sql = "SELECT userid FROM users WHERE userid = '$userId'";
-$result = mysqli_query($conn, $sql);
-$rows = mysqli_num_rows($result);
-if ($rows == 0 && $userId >= 1)
-{
-    $result = mysqli_query($conn, "INSERT INTO users (userid) VALUES ('$userId')");
-}
-*/
 if ($userId >= 1 && $pinNum >= 1)
 {
     $sql = "SELECT * FROM devices WHERE userid = '$userId' and pinnum = '$pinNum'";
